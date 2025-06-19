@@ -1,0 +1,12 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain peaks -->
+  <path d="M20 10L30 25L40 15L50 30L60 5L70 30L80 20L90 30L100 10" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text -->
+  <text x="60" y="38" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">OFF.COM</text>
+  
+  <!-- Compass rose -->
+  <circle cx="20" cy="20" r="8" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M20 12L22 20L20 28L18 20L20 12Z" fill="white"/>
+  <path d="M12 20L20 18L28 20L20 22L12 20Z" fill="white"/>
+</svg>
