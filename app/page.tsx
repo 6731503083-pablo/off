@@ -1,7 +1,19 @@
+"use client";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   return (
     <div className="relative">
       {/* Hero section with background image */}
@@ -16,8 +28,6 @@ export default function Home() {
             className="object-cover"
             quality={90}
           />
-          {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div>{" "} */}
-          {/* Optional overlay to darken image */}
         </div>
 
         {/* Hero content */}
@@ -38,7 +48,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/explore"
-                className="px-8 py-3 bg-white  rounded-4xl font-medium hover:bg-opacity-90 text-gray-900 transition-all"
+                className="px-8 py-3 bg-white rounded-4xl font-medium hover:bg-opacity-90 text-gray-900 transition-all"
               >
                 Shop Men's
               </Link>
@@ -47,14 +57,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Additional content can be added below */}
-      <div className="min-h-screen flex flex-col  pt-16 bg-gray-50">
+      {/* Featured Categories Section - no animation */}
+      <div className="min-h-screen h-full flex flex-col pt-16 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <h2 className="text-6xl font-bold mb-24 text-start">
             Featured Categories
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 h-full">
+            {/* Category 1 */}
             <div className="flex flex-col h-full">
               <div className="relative overflow-hidden rounded-lg shadow-lg group flex-grow">
                 <Image
@@ -96,6 +107,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Category 2 */}
             <div className="flex flex-col h-full">
               <div className="relative overflow-hidden rounded-lg shadow-lg group flex-grow">
                 <Image
@@ -105,7 +117,6 @@ export default function Home() {
                   height={800}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white justify-between flex items-center">
                   <Link
                     href="/category/hiking"
@@ -137,6 +148,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Category 3 */}
             <div className="flex flex-col h-full">
               <div className="relative overflow-hidden rounded-lg shadow-lg group flex-grow">
                 <Image
@@ -146,7 +158,6 @@ export default function Home() {
                   height={800}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white justify-between flex items-center">
                   <Link
                     href="/category/hiking"
@@ -180,6 +191,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* New Arrivals Section */}
     </div>
   );
 }
